@@ -15,26 +15,56 @@
   </style>
 </head>
 <body>
+  <div class="logo">
+    <img src="./images/logo.svg" alt="tip calculator logo">
+  </div>
+  <section>
+    <div class="input">
+      <label for="bill">Bill</label>
+      <input type="text" name="bill" id="bill">
+      <span>
+        <img src="./images/icon-dollar.svg" alt="dollar icon">
+      </span>
 
-  Bill
+      <label for="tips">Select Tip %</label>
+      <input type="text" name="tip" id="tip1" value="5%" disabled>
+      <input type="text" name="tip" id="tip2" value="10%" disabled>
+      <input type="text" name="tip" id="tip3" value="15%" disabled>
+      <input type="text" name="tip" id="tip4" value="25%" disabled>
+      <input type="text" name="tip" id="tip5" value="50%" disabled>
+      <input type="text" name="tip" id="tip6" placeholder="Custom">
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+      <label for="number of people">Number of People</label>
+      <input type="text" name="people" id="people">
+      <img src="./images/icon-person.svg" alt="person icon">
 
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
+    </div>
+    <div class="output">
+      <div class="figures">
+        <div class="tip-amount">
+          <div class="text">
+            <p>Tip Amount</p>
+            <span>/ person</span>
+          </div>
+          <div class="amount">
+            $4.27
+          </div>
+        </div>
+        <div class="total">
+          <div class="text">
+            <p>Total</p>
+            <span>/ person</span>
+          </div>
+          <div class="amount">
+            $32.79
+          </div>
+        </div>
+      </div>
+      <button type="button">
+        Reset
+      </button>
+    </div>
+  </section>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
