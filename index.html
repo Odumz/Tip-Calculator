@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles.css">
   
   <title>Frontend Mentor | Tip calculator app</title>
 
@@ -18,53 +23,61 @@
   <div class="logo">
     <img src="./images/logo.svg" alt="tip calculator logo">
   </div>
-  <section>
-    <div class="input">
-      <label for="bill">Bill</label>
-      <input type="text" name="bill" id="bill">
-      <span>
-        <img src="./images/icon-dollar.svg" alt="dollar icon">
-      </span>
-
-      <label for="tips">Select Tip %</label>
-      <input type="text" name="tip" id="tip1" value="5%" disabled>
-      <input type="text" name="tip" id="tip2" value="10%" disabled>
-      <input type="text" name="tip" id="tip3" value="15%" disabled>
-      <input type="text" name="tip" id="tip4" value="25%" disabled>
-      <input type="text" name="tip" id="tip5" value="50%" disabled>
-      <input type="text" name="tip" id="tip6" placeholder="Custom">
-
-      <label for="number of people">Number of People</label>
-      <input type="text" name="people" id="people">
-      <img src="./images/icon-person.svg" alt="person icon">
-
-    </div>
-    <div class="output">
-      <div class="figures">
-        <div class="tip-amount">
-          <div class="text">
-            <p>Tip Amount</p>
-            <span>/ person</span>
-          </div>
-          <div class="amount">
-            $4.27
-          </div>
+  <div class="main">
+    <section class="form">
+      <div class="input">
+        <div class="bill">
+          <label for="bill">Bill</label>
+          <input type="text" name="bill" id="bill">
+          <span>
+            <img src="./images/icon-dollar.svg" alt="dollar icon">
+          </span>
         </div>
-        <div class="total">
-          <div class="text">
-            <p>Total</p>
-            <span>/ person</span>
-          </div>
-          <div class="amount">
-            $32.79
-          </div>
+
+        <label for="tips">Select Tip %</label>
+        <div class="tips">
+          <input type="text" name="tip" class="tipItem" id="tip1" value="5%" disabled>
+          <input type="text" name="tip" class="tipItem" id="tip2" value="10%" disabled>
+          <input type="text" name="tip" class="tipItem" id="tip3" value="15%" disabled>
+          <input type="text" name="tip" class="tipItem" id="tip4" value="25%" disabled>
+          <input type="text" name="tip" class="tipItem" id="tip5" value="50%" disabled>
+          <input type="text" name="tip" class="tipItem" id="tip6" placeholder="Custom">
         </div>
+        
+        <div class="people">
+          <label for="number of people">Number of People</label>
+          <input type="text" name="people" id="people">
+          <img src="./images/icon-person.svg" alt="person icon">
+        </div>
+  
       </div>
-      <button type="button">
-        Reset
-      </button>
-    </div>
-  </section>
+      <div class="output">
+        <div class="figures">
+          <div class="tip-amount">
+            <div class="text">
+              <p>Tip Amount</p>
+              <span>/ person</span>
+            </div>
+            <div class="amount">
+              $4.27
+            </div>
+          </div>
+          <div class="total">
+            <div class="text">
+              <p>Total</p>
+              <span>/ person</span>
+            </div>
+            <div class="amount">
+              $32.79
+            </div>
+          </div>
+        </div>
+        <button type="button">
+          Reset
+        </button>
+      </div>
+    </section>
+  </div>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
