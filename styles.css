@@ -1,6 +1,9 @@
 * {
+    font-family: 'Space Mono', monospace;
     margin: 0;
     padding: 0;
+    outline: none;
+    box-sizing: border-box;
 }
 
 :root {
@@ -11,6 +14,10 @@
     --color-light-gray-cyan: hsl(185, 41%, 84%);
     --color-light-grayish-cyan: hsl(189, 41%, 97%);
     --color-white: hsl(0, 0%, 100%);
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
 }
 
 input {
@@ -103,7 +110,6 @@ body {
     color: var(--color-strong-cyan);
     font-weight: 700;
     font-size: 40px;
-    letter-spacing: 3px;
 }
 
 button {

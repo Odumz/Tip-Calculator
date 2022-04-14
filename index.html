@@ -10,6 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./styles.css">
+
+  <script src="./main.js"></script>
   
   <title>Frontend Mentor | Tip calculator app</title>
 
@@ -35,18 +37,18 @@
         </div>
 
         <label for="tips">Select Tip %</label>
-        <div class="tips">
-          <input type="text" name="tip" class="tipItem" id="tip1" value="5%" disabled>
-          <input type="text" name="tip" class="tipItem" id="tip2" value="10%" disabled>
-          <input type="text" name="tip" class="tipItem" id="tip3" value="15%" disabled>
-          <input type="text" name="tip" class="tipItem" id="tip4" value="25%" disabled>
-          <input type="text" name="tip" class="tipItem" id="tip5" value="50%" disabled>
-          <input type="text" name="tip" class="tipItem" id="tip6" placeholder="Custom">
+        <div class="tips">          
+          <span class="percent percent-tip tip-value predefined" data-percent="5">5%</span>
+          <span class="percent percent-tip tip-value predefined" data-percent="10">10%</span>
+          <span class="percent percent-tip tip-value predefined" data-percent="15">15%</span>
+          <span class="percent percent-tip tip-value predefined" data-percent="25">25%</span>
+          <span class="percent percent-tip tip-value predefined" data-percent="50">50%</span>
+          <input type="number" name="tip" class="tipItem" id="customTip" placeholder="Custom" min="1" max="100">
         </div>
         
         <div class="people">
           <label for="number of people">Number of People</label>
-          <input type="text" name="people" id="people">
+          <input type="number" class="input money-input" id="numberOfPeople" min="1" name="people">
           <img src="./images/icon-person.svg" alt="person icon">
         </div>
   
@@ -58,8 +60,8 @@
               <p>Tip Amount</p>
               <span>/ person</span>
             </div>
-            <div class="amount">
-              $4.27
+            <div id="tipAmount" class="amount">
+              $0.00
             </div>
           </div>
           <div class="total">
@@ -67,12 +69,12 @@
               <p>Total</p>
               <span>/ person</span>
             </div>
-            <div class="amount">
-              $32.79
+            <div id="total" class="amount">
+              $0.00
             </div>
           </div>
         </div>
-        <button type="button">
+        <button id="resetBtn" type="button">
           Reset
         </button>
       </div>
